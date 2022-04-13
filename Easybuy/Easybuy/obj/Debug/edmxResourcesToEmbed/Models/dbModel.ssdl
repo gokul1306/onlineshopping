@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="easybuydbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="pant">
+    <Key>
+      <PropertyRef Name="pro_id" />
+    </Key>
+    <Property Name="pro_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pro_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="pro_image" Type="nvarchar(max)" />
+    <Property Name="pro_price" Type="int" />
+    <Property Name="pro_status" Type="int" />
+  </EntityType>
+  <EntityType Name="register">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="shirt">
+    <Key>
+      <PropertyRef Name="pro_id" />
+    </Key>
+    <Property Name="pro_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pro_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="pro_image" Type="nvarchar(max)" />
+    <Property Name="pro_price" Type="int" />
+    <Property Name="pro_status" Type="int" />
+  </EntityType>
+  <EntityType Name="tshirt">
+    <Key>
+      <PropertyRef Name="pro_id" />
+    </Key>
+    <Property Name="pro_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pro_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="pro_image" Type="nvarchar(max)" />
+    <Property Name="pro_price" Type="int" />
+    <Property Name="pro_status" Type="int" />
+  </EntityType>
+  <EntityContainer Name="easybuydbModelStoreContainer">
+    <EntitySet Name="pant" EntityType="Self.pant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="register" EntityType="Self.register" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="shirt" EntityType="Self.shirt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tshirt" EntityType="Self.tshirt" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
